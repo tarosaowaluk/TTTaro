@@ -76,7 +76,7 @@ void setup_ip_header(struct iphdr *iph)
 	iph->ttl = MAXTTL;
 	iph->protocol = IPPROTO_UDP;
 	iph->check = 0;
-	iph->saddr = inet_addr("172.31.24.188");
+	iph->saddr = inet_addr("127.0.0.1");
 }
 void setup_udp_header(struct udphdr *udph)
 {
