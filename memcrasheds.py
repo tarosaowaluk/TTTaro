@@ -31,7 +31,7 @@ SERVER_LIST = [
 ]
 
 # Destination 
-TARGET = '185.25.205.82'
+TARGET = '206.72.206.123'
 
 # optional payload to set if no keys exist
 payload = requests.get('https://google.com').text
