@@ -1,0 +1,1 @@
+find /home2/radio1/autodj/test -type f -name "*.mp3" > example.lst
